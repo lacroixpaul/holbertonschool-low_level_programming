@@ -1,11 +1,11 @@
 #include <stdio.h>
 #include <stdlib.h>
 /**
- * Programme pour afficher un message.
+ * main - Point d'entrée principal du programme.
  *
- * Affiche ""Programming is like building a multilingual puzzle".
+ * Affiche une chaine de caracteres dont un special.
  *
- * @return Retourne 0 si l'exécution s'est terminée avec succès.
+ * Return: Retourne 0 si l'exécution s'est terminée avec succès.
  */
 int main(void)
 {
