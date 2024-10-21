@@ -1,7 +1,7 @@
 #include <stdio.h>
 #include <stdlib.h>
 /**
- * @brief Programme pour afficher un message.
+ * Programme pour afficher un message.
  *
  * Affiche ""Programming is like building a multilingual puzzle".
  *
