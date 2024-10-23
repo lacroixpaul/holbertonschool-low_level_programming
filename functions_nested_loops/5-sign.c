@@ -26,7 +26,8 @@ int print_sign(int n)
 	_putchar(',');
 	_putchar(' ');
 	_putchar('\n');
-
+	return (0);
+	}
 	else if (n < 0)
 	{
 	_putchar('-');
