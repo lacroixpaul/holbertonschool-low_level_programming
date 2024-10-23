@@ -2,9 +2,11 @@
 #include <stdio.h>
 
 /**
- * _islower  checks for lowercase character.
- * Returns 1 if c is lowercase, returns 0 otherwise.
- **/
+ * _islower - Vérifie si un caractère est en minuscule
+ * @c: Le caractère à vérifier
+ *
+ * Return: 1 si le caractère est en minuscule, 0 sinon
+ */
 
 int _islower(int c)
 {
