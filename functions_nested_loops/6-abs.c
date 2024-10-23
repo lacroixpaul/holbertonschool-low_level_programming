@@ -3,21 +3,21 @@
 
 /**
  * _abs - Calcule la valeur absolue d'un entier
- * @int n: L'entier dont on veut calculer la valeur absolue
+ * @n: L'entier dont on veut calculer la valeur absolue
  *
  * Return: La valeur absolue de n
  */
 
-int _abs(int)
+int _abs(int n)
 {
 	int n;
 
 	if (n < '0')
 	{
-		(return -n);
+		return (-n);
 	}
 	else
 	{
-		(return n);
+		return (n);
 	}
 }
