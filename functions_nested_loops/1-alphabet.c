@@ -3,11 +3,12 @@
 
 /**
  * print_alphabet - display alphabet in lowercase.
+ * int main point d'entrée de la fonction.
  * Return: Always 0 (Success).
  **/
 
 void print_alphabet(void);
-void print_alphabet(void)
+int main(void)
 {
 	char lettre;
 
