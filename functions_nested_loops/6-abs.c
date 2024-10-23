@@ -8,7 +8,7 @@
  * Return: La valeur absolue de n
  */
 
-int _abs(int n)
+int _abs(n)
 {
 	int n;
 
