@@ -2,12 +2,12 @@
 #include <stdio.h>
 
 /**
- * main - Entry point.
- * Display alphabet in lowercase.
+ * print_alphabet - display alphabet in lowercase.
  * Return: Always 0 (Success).
  **/
+
 void print_alphabet(void);
-char main(void)
+void print_alphabet(void)
 {
 	char lettre;
 
@@ -16,5 +16,4 @@ char main(void)
 		_putchar(lettre);
 	}
 	_putchar('\n');
-	return (0);
 }
