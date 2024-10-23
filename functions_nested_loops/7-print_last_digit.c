@@ -3,13 +3,13 @@
 
 /**
  * print_last_digit -  prints the last digit of a number.
- * @number: L'entier dont on veut trouver le dernier digit. *
+ * @n: L'entier dont on veut trouver le dernier digit. *
  * Return: return last digit.
  */
 
-int print_last_digit(int number)
+int print_last_digit(int n)
 
 {
-int lastdigit = number % 10;
+int lastdigit = n % 10;
 return (lastdigit);
 }
