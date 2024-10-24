@@ -3,14 +3,12 @@
 
 /**
  * times_table - prints the 9 times table, starting with 0.
+ * @mult1: premier multiplicateur.
+ * @mult2: second multiplicateur.
  */
 
 void times_table(int mult1, int mult2)
 {
-for (int i = 0; i < 10; i++)
-{
-	_putchar('\n');
-}
 {
 	for (mult1 = 0; mult1 < 10; mult1++)
 	{
