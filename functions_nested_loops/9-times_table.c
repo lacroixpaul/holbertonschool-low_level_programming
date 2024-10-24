@@ -19,6 +19,7 @@ void times_table(void)
 		{
 				_putchar(result + '0');
 				_putchar(',');
+				_putchar(' ');
 		}
 		else if (mult2 == 9 && result < 10)
 		{
