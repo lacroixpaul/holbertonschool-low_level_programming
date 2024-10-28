@@ -3,9 +3,10 @@
 
 /**
  * main-  t prints the numbers from 1 to 100.
+ * Return: 0 if success.
  **/
 
-void main(void)
+int main(void)
 {
 	int i = 0;
 
@@ -20,4 +21,5 @@ void main(void)
 		else if (i % 3 != 0 && i % 5 != 0)
 		printf("%d ", i);
 }
+		return (0);
 }
