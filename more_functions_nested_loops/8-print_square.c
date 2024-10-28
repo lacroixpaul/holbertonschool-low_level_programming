@@ -11,11 +11,11 @@ void print_square(int size)
 	int i = 0;
 	int j = 0;
 
-	if size < 1
+	if (size < 1)
 	{
 		_putchar('\n');
 	}
-	else if size > 0
+	else if (size > 0)
 	{
 		for (i = 0; i < size; i++)
 	{
