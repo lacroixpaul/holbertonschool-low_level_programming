@@ -12,7 +12,7 @@ int ligne = 0;
 int espace = 0;
 int diese = 0;
 
-	if (size == 0)
+	if (size < 1)
 	{
 		_putchar('\n');
 		return;
