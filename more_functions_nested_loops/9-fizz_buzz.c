@@ -19,10 +19,9 @@ int main(void)
 		if (i % 5 == 0 && i % 3 != 0 && i != 100)
 			printf("Buzz ");
 		if (i == 100)
-			printf("Buzz");
+			printf("Buzz\n");
 		else if (i % 3 != 0 && i % 5 != 0)
 		printf("%d ", i);
 }
-		putchar('\n');
 return (0);
 }
