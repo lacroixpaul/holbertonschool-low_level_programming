@@ -17,13 +17,13 @@ int i, n;
 	if (n % 2 == 0)
 	for (; str[n] != '\0'; n++)
 	{
-		putchar(str[n]);
+		_putchar(str[n]);
 	}
 	else if (n % 2 == 1)
 	n = n - 1;
 	for (; str[n] != '\0'; n++)
 	{
-		putchar(str[n]);
+		_putchar(str[n]);
 	}
-	putchar('\n');
+	_putchar('\n');
 }
