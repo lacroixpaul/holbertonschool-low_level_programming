@@ -13,8 +13,7 @@ int i, n;
 	for (i = 0;  str[i] != '\0'; i++)
 	{
 	}
-		n = i / 2;
-		for (n; str[n] != '\0'; n++)
+		for (n = (i / 2); str[n] != '\0'; n++)
 	{
 		_putchar(str[n]);
 	}
