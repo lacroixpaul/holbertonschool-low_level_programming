@@ -17,7 +17,7 @@ char *i = s;
 		i--;
 	while (i >= s)
 	{
-		putchar(*i);
+		_putchar(*i);
 		i--;
 	}
 }
