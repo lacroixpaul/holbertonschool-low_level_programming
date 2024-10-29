@@ -14,13 +14,8 @@ int i, n;
 	{
 	}
 	n = i / 2;
-	if (n % 2 == 0)
-	for (; str[n] != '\0'; n++)
-	{
-		_putchar(str[n]);
-	}
-	else if (n % 2 == 1)
-	n = n - 1;
+	if (n % 2 == 1)
+		n = (n - 1);
 	for (; str[n] != '\0'; n++)
 	{
 		_putchar(str[n]);
