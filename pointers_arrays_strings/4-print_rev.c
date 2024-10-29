@@ -20,4 +20,5 @@ char *i = s;
 		_putchar(*i);
 		i--;
 	}
+	_putchar('\n');
 }
