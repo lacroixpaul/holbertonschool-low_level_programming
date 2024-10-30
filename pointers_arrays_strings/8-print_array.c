@@ -19,7 +19,8 @@ int i;
 		}
 		else if (i == (n - 1))
 		{
-			printf("%d\n", a[i]);
+			printf("%d", a[i]);
 		}
 	}
+_putchar('\n');
 }
