@@ -19,9 +19,9 @@ int i, n;
 	{
 		n = (n - 1);
 	}
-		for (; str[n] != '\0'; n++)
+		for (; str[n] < i; n++)
 	{
-		_putchar(str[(n + 1)]);
+		_putchar(str[(n)]);
 	}
 	_putchar('\n');
 }
