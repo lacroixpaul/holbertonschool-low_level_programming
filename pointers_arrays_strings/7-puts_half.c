@@ -17,11 +17,11 @@ int i, n;
 	n = i / 2;
 		if (n % 2 == 1)
 	{
-		n = (n - 1);
+		(n = (i + 1) / 2);
 	}
-		for (; str[n] < i; n++)
+		for (; n < i; n++)
 	{
-		_putchar(str[(n)]);
+		_putchar(str[(n + 1)]);
 	}
 	_putchar('\n');
 }
