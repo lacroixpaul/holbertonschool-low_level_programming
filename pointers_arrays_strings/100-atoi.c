@@ -34,8 +34,11 @@ int sign = 1;
 			if (s[i] >= '0' && s[i] <= '9')
 			{
 				num = num * 10 + (s[i] - 48);
-				return (num *= sign);
 			}
-			else if
-				return (0);
+			else
+			{
+			return (0);
+			}
+		}
+	return (num * sign);
 }
