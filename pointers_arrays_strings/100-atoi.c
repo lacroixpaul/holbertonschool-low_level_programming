@@ -15,7 +15,6 @@ int sign = 1;
 
 	while (s[n] != '\0')
 	{
-		n++;
 		if  (s[n] == '-')
 		{
 			sign = -sign;
@@ -24,6 +23,7 @@ int sign = 1;
 		{
 			break;
 		}
+	n++;
 	}
 	if (s[n] < '0' || s[n] > '9')
 	{
