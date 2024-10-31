@@ -25,7 +25,7 @@ int sign = 1;
 			break;
 		}
 	}
-	if (s[n] < '0' && s[n] > '9')
+	if (s[n] < '0' || s[n] > '9')
 	{
 		return (0);
 	}
