@@ -25,6 +25,10 @@ int sign = 1;
 			break;
 		}
 	}
+	if (s[n] < '0' && s[n] > '9')
+	{
+		return (0);
+	}
 		for (; s[n] != '\0'; n++)
 		{
 			if (s[n] >= '0' && s[n] <= '9')
@@ -33,7 +37,7 @@ int sign = 1;
 			}
 			else
 			{
-			return (0);
+			break;
 			}
 		}
 	return (num * sign);
