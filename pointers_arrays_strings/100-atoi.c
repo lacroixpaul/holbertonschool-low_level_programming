@@ -16,7 +16,7 @@ int sign = 1;
 
 	if (s[0] == '-')
 	{
-	sign = -1;
+	sign = -sign;
 	i = 1;
 	while (s[i] == '-')
 		{ i++; }
