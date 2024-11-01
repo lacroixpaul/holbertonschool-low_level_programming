@@ -18,8 +18,10 @@ char rot[] = "NOPQRSTUVWXYZABCDEFGHIJKLMnopqrstuvwxyzabcdefghijklm";
 		for (j = 0; letters[j] != '\0'; j++)
 		{
 			if (s[i] == letters[j])
-			s[i] = rot[j];
-			break;
+			{
+				s[i] = rot[j];
+				break;
+			}
 		}
 	}
 	return (s);
