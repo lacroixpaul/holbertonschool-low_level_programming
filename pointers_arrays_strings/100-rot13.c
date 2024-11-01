@@ -19,6 +19,7 @@ char rot[] = "NOPQRSTUVWXYZABCDEFGHIJKLMnopqrstuvwxyzabcdefghijklm";
 		{
 			if (s[i] == letters[j])
 			s[i] = rot[j];
+			break;
 		}
 	}
 	return (s);
