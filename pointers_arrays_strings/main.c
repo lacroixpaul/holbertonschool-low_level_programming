@@ -20,7 +20,12 @@ int main(void)
         {100, 1012451, 11102, 12545, 214543435},
         {10, 12401, 10452, 11542545, 1214543435},
     };
+     int c2[2][2] = {
+        {0, 1},
+        {10, 11}
+     };
     print_diagsums((int *)c3, 3);
     print_diagsums((int *)c5, 5);
+        print_diagsums((int *)c2, 2);
     return (0);
 }
