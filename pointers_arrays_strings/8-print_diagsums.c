@@ -10,7 +10,7 @@
 void print_diagsums(int *a, int size)
 {
 	int i, j;
-	unsigned int sum_a = 0, sum_b = 0;
+	long int sum_a = 0, sum_b = 0;
 
 	if (size == 1)
 	{
@@ -33,6 +33,6 @@ void print_diagsums(int *a, int size)
 		}
 	}
 	}
-	printf("%d, ", sum_a);
-	printf("%d\n", sum_b);
+	printf("%ld, ", sum_a);
+	printf("%ld\n", sum_b);
 }
