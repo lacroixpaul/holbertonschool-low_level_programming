@@ -3,15 +3,14 @@
 #include <stdlib.h>
 
 /**
- * **alloc_grid- returns a pointer to a 2 dimensional array of integers.
- * @width : number of column.
+ * free_grid- frees a 2 dimensional grid.
+ * @grid : a 2 dimensional grid.
  * @height : number of line.
- * Return: a pointer of NULL in case of error.
  **/
 
-int **alloc_grid(int width, int height)
+void free_grid(int **grid, int height)
 {
-	int i = 0, j = 0, k = 0;
+	int i = 0, j = 0;
 	int **array;
 
 	if (width < 1 || height < 1)
@@ -29,11 +28,6 @@ int **alloc_grid(int width, int height)
 		array[i] = (int *)malloc(width * sizeof(int));
 		if (array[i] == NULL)
 		{
-			for (; k < i; k++)
-			{
-				free(array[k]);
-			}
-			free(array);
 			return (NULL);
 		}
 		for (j = 0; j < width; j++)
