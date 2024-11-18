@@ -27,7 +27,7 @@ int main(int argc, char *argv[])
 	num1 = atoi(argv[1]);
 	num2 = atoi(argv[3]);
 	operator = argv[2][0];
-	operator_cmp = "+*-/%";
+	operator_cmp = "+**-/%";
 
 	if (strchr(operator_cmp, operator) == NULL)
 	{
