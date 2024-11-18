@@ -13,18 +13,21 @@
 
 int main(int argc, char *argv[])
 {
+	int num1 = 0, num2 = 0, result = 0;
+	char operator;
+	char *operator_cmp;
+	int (*operation)(int, int);
+
 	if (argc != 4)
 	{
-		 printf("Error\n");
-		 exit(98);
+		printf("Error\n");
+		exit(98);
 	}
 
-	int num1 = atoi(argv[1]);
-	int num2 = atoi(argv[3]);
-	char operator = argv[2][0];
-	char *operator_cmp = "+*-/%";
-	int result = 0;
-	int (*operation)(int, int);
+	num1 = atoi(argv[1]);
+	num2 = atoi(argv[3]);
+	operator = argv[2][0];
+	operator_cmp = "+*-/%";
 
 	if (strchr(operator_cmp, operator) == NULL)
 	{
@@ -36,7 +39,7 @@ int main(int argc, char *argv[])
 		printf("Error\n");
 		exit(100);
 		}
-	operation = get_op_func(&operator);
+	operation = get_op_func(argv[2]);
 	result = operation(num1, num2);
 	printf("%d\n", result);
 return (0);
