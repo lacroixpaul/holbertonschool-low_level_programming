@@ -32,7 +32,7 @@ int main(int argc, char *argv[])
 	if (strchr(operator_cmp, operator) == NULL)
 	{
 	printf("Error\n");
-	exit(100);
+	exit(99);
 	}
 	if ((num2 == 0) && (operator == '/' || operator == '%'))
 		{
