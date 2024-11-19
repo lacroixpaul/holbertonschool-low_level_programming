@@ -60,8 +60,6 @@ void print_all(const char * const format, ...)
 {
 unsigned int i = 0, j = 0;
 va_list args;
-va_start(args, format);
-
 type_specifier_t specifiers[] = {
 {'c', print_char},
 {'i', print_int},
@@ -70,6 +68,7 @@ type_specifier_t specifiers[] = {
 {'\0', NULL}
 };
 
+va_start(args, format);
 while (format[i] != '\0')
 {
 j = 0;
