@@ -18,7 +18,7 @@ int main(int argc, char *argv[])
 	char *operator_cmp;
 	int (*operation)(int, int);
 
-	if (argc != 4 || (strlen(argv[2]) != 1))
+	if (argc != 4)
 	{
 		printf("Error\n");
 		exit(98);
@@ -29,7 +29,7 @@ int main(int argc, char *argv[])
 	operator = argv[2][0];
 	operator_cmp = "+*-/%";
 
-	if (strchr(operator_cmp, operator) == NULL)
+	if (strchr(operator_cmp, operator) == NULL || (strlen(argv[2]) != 1))
 	{
 	printf("Error\n");
 	exit(99);
