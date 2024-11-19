@@ -4,6 +4,7 @@
 
 /**
  * print_char- prints a char argument.
+ * @args: argument.
  * Return: nothing.
  **/
 
@@ -14,6 +15,7 @@ printf("%c", va_arg(args, int));
 
 /**
  * print_int- prints a int argument.
+ * @args: argument.
  * Return: nothing.
  **/
 
@@ -24,16 +26,18 @@ printf("%d", va_arg(args, int));
 
 /**
  * print_float- prints a float argument.
+ * @args: argument.
  * Return: nothing.
  **/
 
-void print_float(va_list args) 
+void print_float(va_list args)
 {
 printf("%f", va_arg(args, double));
 }
 
 /**
  * print_string- prints a string argument.
+ * @args: argument.
  * Return: nothing.
  **/
 
@@ -46,23 +50,18 @@ printf("%s", str);
 }
 
 /**
- * type_specifier_t
- * @type: The type
- * @f: The function associated
+ * type_specifier_t: structure.
+ * @specifier: The type.
+ * @f: The function associated.
  */
-typedef struct type_specifier
-{
-char specifier;
-void (*print_func)(va_list args);
-}
-type_specifier_t;
 
-type_specifier_t specifiers[] = {
- {'c', print_char},
- {'i', print_int},
- {'f', print_float},
- {'s', print_string},
- {'\0', NULL}
+type_specifier_t specifiers[] =
+{
+{'c', print_char},
+{'i', print_int},
+{'f', print_float},
+{'s', print_string},
+{'\0', NULL}
 };
 
 /**
@@ -79,20 +78,21 @@ va_start(args, format);
 
 while (format[i] != '\0')
 {
+j = 0;
+while (specifiers[j].specifier != '\0')
+{
 if (format[i] == specifiers[j].specifier)
 {
 specifiers[j].print_func(args);
-}
-if (format[i] == specifiers[j].specifier && format[i + 1] != '\0')
+if (format[i + 1] != '\0')
 {
 printf(", ");
 }
-while(specifiers[j].specifier != '\0')
-{
+break;
+}
 j++;
 }
 i++;
-j = 0;
 }
 va_end(args);
 printf("\n");
