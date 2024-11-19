@@ -79,19 +79,19 @@ va_start(args, format);
 
 while (format[i] != '\0')
 {
-if (specifiers[j].specifier == format[i])
+if (format[i] == specifiers[j].specifier)
 {
-va_arg(args, int);
+specifiers[j].print_func(args);
 }
-if (format[i] != '\0')
+if (format[i] == specifiers[j].specifier && format[i + 1] != '\0')
 {
 printf(", ");
 }
-i++;
 while(specifiers[j].specifier != '\0')
 {
 j++;
 }
+i++;
 j = 0;
 }
 va_end(args);
