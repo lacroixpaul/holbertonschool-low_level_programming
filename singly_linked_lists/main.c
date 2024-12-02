@@ -3,37 +3,32 @@
 #include <stdio.h>
 #include "lists.h"
 
-// Fonction pour créer un nouveau nœud
-list_t *create_node(char *str) {
-    list_t *new_node = malloc(sizeof(list_t));
-    if (new_node == NULL) {
-        return NULL;
+/**
+ * main - check the code
+ *
+ * Return: Always 0.
+ */
+int main(void)
+{
+    list_t *head;
+    list_t *new;
+    list_t hello = {"World", 5, NULL};
+    size_t n;
+
+    head = &hello;
+    new = malloc(sizeof(list_t));
+    if (new == NULL)
+    {
+        printf("Error\n");
+        return (1);
     }
-    new_node->str = str ? strdup(str) : NULL;
-    new_node->len = str ? strlen(str) : 0;
-    new_node->next = NULL;
-    return new_node;
-}
-
-// Fonction principale pour tester print_list
-int main(void) {
-    list_t *head = create_node("Hello");
-    head->next = create_node("World");
-    head->next->next = create_node(NULL);
-    head->next->next->next = create_node("!");
-
-    size_t nodes = print_list(head);
-    printf("Number of nodes: %zu\n", nodes);
-
-    // Libération de la mémoire
-    list_t *current = head;
-    list_t *next_node;
-    while (current != NULL) {
-        next_node = current->next;
-        free(current->str);
-        free(current);
-        current = next_node;
-    }
-
-    return 0;
+    new->str = strdup("Hello");
+    new->len = 5;
+    new->next = head;
+    head = new;
+    n = list_len(head);
+    printf("-> %lu elements\n", n);
+    free(new->str);
+    free(new);
+    return (0);
 }
