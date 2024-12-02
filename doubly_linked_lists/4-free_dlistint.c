@@ -4,9 +4,8 @@
 #include "lists.h"
 
 /**
- * free_list - free a listint_t list.
+* free_dlistint - free a listint_t list.
 * @head : last element added.
-* @n : int to add.
 * Return: the address of the new element, or NULL if it failed.
  **/
 
