@@ -39,23 +39,28 @@ int main(int argc, char *argv[])
 	source = open(argv[1], O_RDONLY);
 	if (source == -1)
 		error_code("Can't read from file", argv[1], 98);
-	target = open(argv[2], O_WRONLY | O_CREAT | O_TRUNC, 0600);
+	target = open(argv[2], O_WRONLY | O_CREAT | O_TRUNC, 0664);
 	if (target == -1)
 	{
-		error_code("Can't write to", argv[2], 99);
 		close(source);
+		error_code("Can't write to", argv[2], 99);
 	}
 	while ((n_read = read(source, buffer, sizeof(buffer))) > 0)
 	{
 		n_written = write(target, buffer, n_read);
 		if (n_written != n_read)
 		{
+			close(target);
+			close(source);
 			error_code("Can't write to", argv[2], 99);
-			close(target),	close(source);
 		}
 	}
 	if (n_read == -1)
+	{
+		close(source);
+		close(target);
 		error_code("Can't read from file", argv[1], 98);
+	}
 	if (close(source) == -1)
 		error_code("Can't close file %s", argv[1], 100);
 	if (close(target) == -1)
