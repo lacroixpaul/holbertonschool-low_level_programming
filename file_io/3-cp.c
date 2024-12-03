@@ -39,7 +39,7 @@ int main(int argc, char *argv[])
 	source = open(argv[1], O_RDONLY);
 	if (source == -1)
 		error_code("Can't read from file", argv[1], 98);
-	target = open(argv[2], O_WRONLY | O_TRUNC);
+	target = open(argv[2], O_WRONLY | O_CREAT | O_TRUNC, 0600);
 	if (target == -1)
 	{
 		error_code("Can't write to", argv[2], 99);
