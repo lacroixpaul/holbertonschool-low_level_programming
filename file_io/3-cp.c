@@ -62,8 +62,8 @@ int main(int argc, char *argv[])
 		error_code("Can't read from file", argv[1], 98);
 	}
 	if (close(source) == -1)
-	dprintf(STDERR_FILENO, "Error: Can't close fd %d\n", source);
+	dprintf(STDERR_FILENO, "Error: Can't close fd %d\n", source), exit(100);
 	if (close(target) == -1)
-		dprintf(STDERR_FILENO, "Error: Can't close fd %d\n", target);
+		dprintf(STDERR_FILENO, "Error: Can't close fd %d\n", target), exit(100);
 	return (0);
 }
