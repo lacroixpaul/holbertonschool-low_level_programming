@@ -1,27 +1,22 @@
-Requiescat
-by Oscar Wilde
+#include <stdio.h>
+#include <stdlib.h>
+#include "main.h"
 
-Tread lightly, she is near
-Under the snow,
-Speak gently, she can hear
-The daisies grow.
+/**
+ * main - check the code
+ *
+ * Return: Always 0.
+ */
+int main(int ac, char **av)
+{
+    int res;
 
-All her bright golden hair
-Tarnished with rust,
-She that was young and fair
-Fallen to dust.
-
-Lily-like, white as snow,
-She hardly knew
-She was a woman, so
-Sweetly she grew.
-
-Coffin-board, heavy stone,
-Lie on her breast,
-I vex my heart alone,
-She is at rest.
-
-Peace, Peace, she cannot hear
-Lyre or sonnet,
-All my life's buried here,
-Heap earth upon it.
+    if (ac != 3)
+    {
+        dprintf(2, "Usage: %s filename text\n", av[0]);
+        exit(1);
+    }
+    res = append_text_to_file(av[1], av[2]);
+    printf("-> %i)\n", res);
+    return (0);
+}
